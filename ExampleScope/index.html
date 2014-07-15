@@ -1,0 +1,19 @@
+<html ng-app='app'>
+	<head>
+    	<link rel="stylesheet" href="../lib/bootstrap.css" />
+		<script src="../lib/angular.js"></script>
+		<script src="../lib/lodash.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-controller="Ctrl">
+			<div class="row">This one is on the outer scope : {{id}}</div>
+			<div class="row">
+				<sample-one class='container'></sample-one>
+			</div>
+			<div class="row">Isolate scope directive
+				<sample-isolate></sample-isolate>
+			</div>
+		</div>
+	</body>
+</html>
