@@ -1,0 +1,19 @@
+<html ng-app='app'>
+	<head>
+    	<link rel="stylesheet" href="../lib/bootstrap.css" />
+		<script src="../lib/angular.js"></script>
+		<script src="../lib/lodash.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-controller="Ctrl">
+			<div class="row">Outer Scope
+				<div>Employee Id: {{id}}</div>
+				<div>Employee Name: {{empName}}</div>
+			</div>
+			<div class="row">
+				<sample-one class='container'></sample-one>
+			</div>
+		</div>
+	</body>
+</html>

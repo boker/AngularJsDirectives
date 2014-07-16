@@ -7,12 +7,15 @@
 	</head>
 	<body>
 		<div class="container" ng-controller="Ctrl">
-			<div class="row">This one is on the outer scope : {{id}}</div>
+			<div class="row">Outer Scope
+				<div>Employee Id: {{id}}</div>
+				<div>Employee Name: {{empName}}</div>
+			</div>
 			<div class="row">
 				<sample-one class='container'></sample-one>
 			</div>
 			<div class="row">Isolate scope directive
-				<sample-isolate></sample-isolate>
+				<sample-isolate emp-name="empName" notify="callBack('param1 string', 'param2 string')"></sample-isolate>
 			</div>
 		</div>
 	</body>
