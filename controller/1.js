@@ -1,10 +1,11 @@
+//life cycle
 'use strict';
 
 angular.module('app', [])
   .controller('Ctrl', function ($scope) {
 
   })
-  .directive('sampleCtrl', function () {
+  .directive('dirOne', function () {
     return {
       restrict: 'E',
       template: '<div>ctrl</div>',

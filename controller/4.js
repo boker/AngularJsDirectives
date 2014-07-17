@@ -1,10 +1,11 @@
+//inter-directive communication & controller
 'use strict';
 
 angular.module('app', [])
   .controller('Ctrl', function ($scope) {
 
   })
-  .directive('sampleCtrlOne', function () {
+  .directive('dirOne', function () {
     return {
       restrict: 'EACM',
       controller: function () {
@@ -18,7 +19,7 @@ angular.module('app', [])
         controller.callCtrl();
       }
     }
-  }).directive('sampleCtrlTwo', function () {
+  }).directive('dirTwo', function () {
     return {
       restrict: 'EACM',
       require: '^sampleCtrlOne',

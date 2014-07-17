@@ -1,10 +1,11 @@
+//inter-directive communication & controller
 'use strict';
 
 angular.module('app', [])
   .controller('Ctrl', function ($scope) {
 
   })
-  .directive('sampleCtrlOne', function () {
+  .directive('dirOne', function () {
     return {
       restrict: 'E',
       controller: function ($scope, $element, $attrs, $transclude) {
@@ -15,7 +16,7 @@ angular.module('app', [])
         }
       }
     }
-  }).directive('sampleCtrlTwo', function () {
+  }).directive('dirTwo', function () {
     return {
       restrict: 'E',
       require: '^sampleCtrlOne',

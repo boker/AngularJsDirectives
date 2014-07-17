@@ -4,7 +4,7 @@ angular.module('app', [])
   .controller('Ctrl', function ($scope) {
 
   })
-  .directive('sampleCtrlOne', function () {
+  .directive('dirOne', function () {
     var linkFn = {
       pre: function (scope) {
         console.log('in pre linking');

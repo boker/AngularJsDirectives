@@ -1,10 +1,11 @@
+//prelink & postlink & transclusion
 'use strict';
 
 angular.module('app', [])
   .controller('Ctrl', function ($scope) {
 
   })
-  .directive('sampleCtrlOne', function () {
+  .directive('dirOne', function () {
     return {
       restrict: 'EACM',
       transclude: true,
