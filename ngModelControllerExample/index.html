@@ -1,0 +1,18 @@
+<html ng-app='app'>
+	<head>
+    	<link rel="stylesheet" href="../lib/bootstrap.css" />
+		<script src="../lib/jquery-1.10.2.js"></script>
+		<script src="../lib/jquery-ui-1.10.4.custom.js"></script>
+		<script src="../lib/angular.js"></script>
+		<script src="../lib/lodash.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-controller="Ctrl">
+			<div class="row">
+				Controller Date: <input type="text" ng-model="dob"/>
+			</div>
+			<date-picker ng-model="dob"><date-picker>
+		</div>
+	</body>
+</html>
