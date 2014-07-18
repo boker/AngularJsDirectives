@@ -8,8 +8,11 @@
 		<script src="app.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<div my-toggle="alert-success">This text will be toggled with a color!</div>
+		<div class="container" ng-controller="Ctrl">
+			<accordian>
+				<div class="row">Employee Details</div>
+				<div class="row">Employee Name : {{emp.name}}</dviv>
+			</accordian>
 		</div>
 	</body>
 </html>

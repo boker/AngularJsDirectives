@@ -12,9 +12,9 @@ angular.module('app', [])
 		template: '<div class="row">Employee Id: {{id}}</div>'
 					+ '<div class="row">Employee Name: {{empName}}</div>',
 		link: function(scope){
-			//scope.id = 2;
-			//scope.empName = 'SpiderMan!';
+			scope.id = 2;
+			scope.empName = 'SpiderMan!';
 		}
-		//, scope: true
+		, scope: true
 	}
 });

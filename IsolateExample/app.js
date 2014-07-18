@@ -24,8 +24,8 @@ angular.module('app', [])
 			};
 		}
 		, scope: {
-			empName: '@'
-			//empName: '=',
+			//empName: '@empName'
+			empName: '='
 			,notify: '&notify'
 		}
 	}
