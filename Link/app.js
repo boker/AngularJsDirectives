@@ -6,6 +6,7 @@ angular.module('app', [])
 		restrict: 'A',
 		link: function(scope, elm, attrs){
 			var color = attrs.myToggle;
+			
 			elm.on('click', function(){
 				elm.toggleClass(color);
 			});

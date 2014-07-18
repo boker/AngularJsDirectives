@@ -2,21 +2,21 @@
 
 angular.module('app', [])
 .controller('Ctrl', function($scope){
-	$scope.emp = {id: 1, name: "SuperName"};
+	$scope.emp = {id: 1, firstName: "SuperName", lastName: "patel"};
 })
 .directive('accordian', function(){
 	return {
 		restrict: 'E',
 		transclude: true,
-		template: '<div class="row" ng-click="toggleShow()">Show Content'
-					+ '<div ng-show="show" ng-transclude></div>'
+		template: '<div class="row">Show Content'
+					+ '<div ng-transclude></div>'
 					+ '</div>',
 		link: function(scope, elm, attrs){
-			scope.toggleShow = function(){
-				scope.show = !scope.show;
-			};
-			console.log(elm[0]);
-		},
-		scope: true
+			var clickableElm = $(elm[0].childNodes[0]);
+			var toggableElm = $(clickableElm[0].childNodes[1]);
+			clickableElm.on('click', function(){
+				toggableElm.toggleClass('hidden');
+			});
+		}
 	}
 })
