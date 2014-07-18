@@ -1,13 +1,14 @@
+//life cycle
 'use strict';
 
 angular.module('app', [])
   .controller('Ctrl', function ($scope) {
 
   })
-  .directive('sampleCtrl', function () {
+  .directive('dirOne', function () {
     return {
-      restrict: 'E',
-      template: '<div>ctrl</div>',
+      restrict: 'EA',
+      template: '<div>template</div>',
       controller: function () {
         console.log('in ctrl');
       },
@@ -21,4 +22,4 @@ angular.module('app', [])
         console.log('in link');
       }
     }
-  })
+  });
