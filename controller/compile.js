@@ -5,20 +5,21 @@ angular.module('app', [])
   .controller('Ctrl', function ($scope) {
 
   })
-  .directive('dirOne', function () {
+  .directive('compileDir', function () {
     return {
       restrict: 'E',
-      template: '<div class="section">template</div>',
+      template: '<div class="section">directive template</div>',
       scope: true,
       controller: function ($scope) {
         $scope.val = true;
       },
       compile: function (tElement, tAttrs) {
-        console.log('from compile');
-        tElement.children('.section').addClass('newclass');
+        console.log('inside compile ... adding new-class');
+        tElement.children('.section').addClass('new-class');
         return function (scope, iElement, iAttrs) {
           if (scope.val) {
-            iElement.children('.section').addClass('anotherclass');
+            console.log('inside link ... adding another-class');
+            iElement.children('.section').addClass('another-class');
           }
         };
       }

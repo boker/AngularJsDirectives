@@ -17,9 +17,11 @@ angular.module('app', [])
       link: {
         pre: function (iS, iE, iA) {
           console.dirxml('pre', iE);
+          console.dirxml(document.getElementsByClassName('transclude'));
         },
         post: function (iS, iE, iA) {
           console.dirxml('post', iE);
+          console.dirxml(document.getElementsByClassName('transclude'));
         }
       }
     }
